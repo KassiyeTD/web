@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ханы Казахского Ханства</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            font-size: 1.4em;
+            padding: 1.5em 1em;
+            background-color: #d7b839;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            color: #004e89 !important;
+        }
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .gallery-row {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        .gallery-card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border: 2px solid #d7b839;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .gallery-card:hover {
+            transform: scale(1.05);
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-card .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            font-size: 1em;
+            display: none;
+        }
+        .gallery-card:hover .info {
+            display: block;
+        }
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: linear-gradient(to bottom, #d7b839, #004e89);
+            z-index: -1;
+        }
+        @keyframes scroll-effect {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        .vertical-line {
+            background-size: 200% 200%;
+            animation: scroll-effect 3s infinite linear;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #d7b839;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Kazakh Khanate</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="khans.html">Khans</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="governance.html">Governance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="quiz.html">Quiz</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container gallery-container">
+    <div class="vertical-line"></div>
+    <div class="gallery-row">
+ 
+        <div class="gallery-card" data-toggle="modal" data-target="#modalKerey">
+            <img src="khan/керей.jpg" alt="Kerey Khan">
+            <div class="info">
+                <h5>Kerey Khan</h5>
+                <p>He was one of the first founders of the Kazakh Khanate together with Zhanibek Khan. Strengthened the position of the new state.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card" data-toggle="modal" data-target="#modalJanibek">
+            <img src="khan/zhanibek.jpg" alt="Zhanibek Khan">
+            <div class="info">
+                <h5>Zhanibek Khan</h5>
+                <p>Co-ruler of Korea, participated in the unification of the Kazakh lands. His reign was characterized by the strengthening of the internal structure of the khanate.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container gallery-container">
+    <div class="vertical-line"></div>
+    <div class="gallery-row">
+       
+        <div class="gallery-card" data-toggle="modal" data-target="#modalKerey">
+            <img src="khan/burundik.jpg" alt="Burundik Khan">
+            <div class="info">
+                <h5>Burundik Khan</h5>
+                <p>The successor of the case of Kerey and Zhanibek. He sought to preserve the independence of the Kazakh Khanate from neighboring states.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card" data-toggle="modal" data-target="#modalJanibek">
+            <img src="khan/kasym.jpg" alt="Kasym khan">
+            <div class="info">
+                <h5>Kasym khan</h5>
+                <p>Under him, the Kazakh Khanate reached its heyday. The author of the first set of Kazakh laws is "Kasym khanna kaska zholy".</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container gallery-container">
+    <div class="vertical-line"></div>
+    <div class="gallery-row">
+    
+        <div class="gallery-card" data-toggle="modal" data-target="#modalKerey">
+            <img src="khan/mamash.webp" alt="Mamash Khan">
+            <div class="info">
+                <h5>Mamash Khan</h5>
+                <p>A short period of government, known for political instability.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card" data-toggle="modal" data-target="#modalJanibek">
+            <img src="khan/tahir.jpg" alt="Tahir Khan">
+            <div class="info">
+                <h5>Tahir Khan</h5>
+                <p>He tried to strengthen the khanate in the face of external pressure and internal contradictions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container gallery-container">
+    <div class="vertical-line"></div>
+    <div class="gallery-row">
+       
+        <div class="gallery-card" data-toggle="modal" data-target="#modalKerey">
+            <img src="khan/hak.jpg" alt="Haknazar Khan">
+            <div class="info">
+                <h5>Haknazar Khan</h5>
+                <p>A long and successful reign. He restored the unity of the Kazakh lands and expanded the territory of the khanate.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card" data-toggle="modal" data-target="#modalJanibek">
+            <img src="khan/shygai.jpg" alt="Shigai Khan">
+            <div class="info">
+                <h5>Shigai Khan</h5>
+                <p>He strengthened the defense capability of the khanate, negotiated with neighboring states.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container gallery-container">
+    <div class="vertical-line"></div>
+    <div class="gallery-row">
+       
+        <div class="gallery-card" data-toggle="modal" data-target="#modalKerey">
+            <img src="khan/tayekel.jpg" alt="Tauekel Khan">
+            <div class="info">
+                <h5>Tauekel Khan</h5>
+                <p>He waged active wars for independence, participated in battles with the Bukhara Khanate.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card" data-toggle="modal" data-target="#modalJanibek">
+            <img src="khan/esim.jpg" alt="Yesim Khan">
+            <div class="info">
+                <h5>Yesim Khan</h5>
+                <p>The creator of the code of laws "Yesim hannin yeski zholy". He stabilized the internal situation in the khanate.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="text-center">Other Khans of the Kazakh Khanate</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Years of Reign</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Zhangir Khan (Salkam Zhangir)</td>
+                <td>1628–1652</td>
+                <td>Defender of the Kazakh lands from the Dzungars. He led the army in the battle of Orbulak (1643), where the Kazakhs won.</td>
+            </tr>
+            <tr>
+                <td>Tauke Khan</td>
+                <td>1680–1718</td>
+                <td>An outstanding ruler, the author of the code of laws "Zhety Jargy". Under him, the Kazakh Khanate became a strong state.</td>
+            </tr>
+            <tr>
+                <td>Abylaikhan</td>
+                <td>1771–1781</td>
+                <td>The great Kazakh Khan, the unifier of the lands. He participated in the wars against the Dzungars, strengthened diplomatic relations with Russia and China.</td>
+            </tr>
+            <tr>
+                <td>Kenesary Khan</td>
+                <td>1841–1847</td>
+                <td>The last Kazakh khan. He led the national liberation movement against the colonial policy of the Russian Empire.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+
+
+
+
+
